@@ -25,7 +25,6 @@ function createFeatures(earthquakeData) {
             layer.bindPopup("<h3>Location: " + feature.properties.place + "<br>Magnitude: " + feature.properties.mag +
                 "</h3><hr><h4>Date & Time: " + newDate + "</h4>");
 
-            // var newYear = newDate.getFullYear()
             // console.log(newYear);
         },
        
