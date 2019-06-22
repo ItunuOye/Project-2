@@ -19,7 +19,7 @@ Base.metadata.create_all(engine)
 session = Session(engine)
 
 
-# Store data in dataframe
+# Store data in DataFrame
 df = pd.read_sql('SELECT fire_year,fire_name, fips_name, fire_size, stat_cause_descr, latitude, longitude, fips_code, DISCOVERY_DATE, CONT_DATE FROM Fires WHERE state == "CA" AND fire_year >= 2010 and fire_year <= 2014 and fire_size > 1000 and county <> "none"', engine)
 
 merge_df = df.rename(index=str,columns={"FIRE_YEAR":"Fire Year","FIRE_NAME":"Fire Name","FIRE_SIZE":"Acres Burned",
@@ -30,7 +30,7 @@ merge_df = df.rename(index=str,columns={"FIRE_YEAR":"Fire Year","FIRE_NAME":"Fir
 merge_df = merge_df[["Fire Year","Fire Name","Acres Burned","Fire Cause","Latitude","Longitude","FIPS Code","County","Start Date","Containment Date"]]
 merge_df["Number of Days"] = ""
 
-# Web Scrapping
+# Web Scrapping for Wildfires
 browser = Browser("chrome", executable_path='chromedriver.exe', headless=True)
 # 2015 data
 url = "https://en.wikipedia.org/wiki/2015_California_wildfires"
@@ -103,7 +103,7 @@ df_2018_clean["Number of Days"] = (pd.to_datetime(df_2018_clean["Containment dat
 df_2018_clean = df_2018_clean.dropna()
 df_2018_clean = df_2018_clean.rename(index=str,columns={"Name":"Fire Name","Acres":"Acres Burned","Containment date":"Containment Date","Start date":"Start Date"})
 
-# merge all dataframes
+# merge all dataframes from 2015-2018
 wiki_fire_df = pd.concat([merge_df,df_2015_clean,df_2016_clean,df_2017_clean,df_2018_clean], ignore_index=True)
 
 df_us_fires = pd.read_sql('SELECT FIRE_NAME, FIRE_YEAR, FIRE_SIZE, STAT_CAUSE_DESCR, LONGITUDE, LATITUDE, FIPS_CODE, FIPS_NAME FROM Fires WHERE FIRE_SIZE > 1000 AND FIPS_CODE <> "None"', engine)
