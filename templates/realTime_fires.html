@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CaliFuego</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Our own CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css" media="screen">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">CaliFuego</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Wild-Fires
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="uswildfires.html">US Wild-Fires per Year</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="acresburned.html">Affected Acres by County per Year</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="heat_map.html">GeoMap / Heat Map</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="data.html">Data<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+      <section class="row">
+        <div class="col-md-12">
+          <article class="main-content">
+            <h2 class="description-header">Current Wild-Fires in California</h2>
+            <hr class="description-hr"/>
+			<iframe src="https://www.google.com/maps/d/embed?mid=1HacmM5E2ueL-FT2c6QMVzoAmE5M19GAf" width="100%" height="480"></iframe>
+			<img src="../Resources/Images/Legend.png" alt="Legend">
+            <p>Priority of the project is to gather data of forest fires in California and produce the story of the reasons and locations of such events for the past few decades. We will also attempt to tell the story of any correlations which may exist with temperature increases due to global warming and perhaps earthquakes.</p>
+            <p>Our inspiration is due to an increase of such fires and their close proximity to populated areas.  The proximity to populated areas is not just the fires but ash and amber which may travel up to 10 miles. Furthermore, the pollution and air quality in an area much larger than the ground covered by the fires. As a case in point, the recent wild fires during August of 2018 had covered one third of the air space over the state of California.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
