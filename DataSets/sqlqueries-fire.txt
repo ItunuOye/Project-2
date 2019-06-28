@@ -1,0 +1,26 @@
+create database FireCakes;
+
+use FireCakes;
+
+CREATE TABLE `fires` (
+  `FIRE_YEAR` int(11) DEFAULT NULL,
+  `FIRE_NAME` text,
+  `FIPS_NAME` text,
+  `FIPS_CODE` text,
+  `LATITUDE` double DEFAULT NULL,
+  `LONGITUDE` double DEFAULT NULL,
+  `DISCOVERY_DATE` double DEFAULT NULL,
+  `CONT_DATE` double DEFAULT NULL,
+  `FIRE_SIZE` double DEFAULT NULL
+);
+
+CREATE TABLE `wiki_fires_cleaned_2015-2018` (
+  `Name` text,
+  `County` text,
+  `Acres` int(11) DEFAULT NULL,
+  `Start Date` text,
+  `Containment Date` text,
+  `Year` int(11) DEFAULT NULL,
+  `Number of days the fire was on` int(11) DEFAULT NULL
+);
+
